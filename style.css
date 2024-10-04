@@ -3,10 +3,75 @@
   padding: 0;
   box-sizing: border-box;
   outline: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 header {
   width: 100%;
+}
+
+
+
+.logo-container{
+  display: flex;
+}
+
+
+.logo{
+  display: block;
+  display: flex;
+  margin: auto;
+  max-width: 190px;
+  min-width: 190px;
+  padding: 15px;
+}
+
+.separator{
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: rgb(182, 27, 27);
+}
+
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 6rem;
+}
+
+.nav-bar{
+  justify-content: space-between;
+}
+
+.nav-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  line-height: 1.7em;
+  font-family: 'Anton';
+  width: 100%;
+  padding: 4px 4%;
+}
+
+.nav-list ul{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-item{
+  margin: 0 15px;
+}
+
+.nav-link{
+  text-decoration: none;
+  font-size: 1.15rem;
+  color: red;
+  font-weight: 400;
 }
 
 .header-content {
@@ -82,16 +147,25 @@ i {
   margin: 0 auto;
   padding: 0 8px;
 }
+.hero {
+  color: #FFF;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
 
-.bg-home {
+.bg-home{
   position: relative;
 }
 
-.bg-home:before {
-  content: "";
+.bg-home::before{
+  content: '';
   display: block;
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assets/assets/bg.svg");
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("assets/assets/bg.svg");
   left: 0;
   top: 0;
   width: 100%;
@@ -103,15 +177,6 @@ i {
   opacity: 1;
 }
 
-.hero {
-  color: #FFF;
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 14px;
-}
 .hero h1 {
   text-align: center;
   line-height: 150%;
@@ -126,15 +191,22 @@ i {
 .button-contact {
   padding: 14px 28px;
   color: #FFF;
-  background-color: #d94140;
+  background-color: red;
   border: 0;
   font-size: 18px;
   font-weight: 600;
-  margin: 14px 0;
+  margin: 40px 0;
+
+  background: transparent;
+  border: 2px solid red;
+  transition: 0.3s;
 }
 
 .button-contact:hover {
-  animation: scaleButton 0.8s alternate infinite;
+  box-shadow: 0px 0px 10px 8px red,
+  inset 0px 0px 10px 2px #ff006f;
+
+  transform: scale(1.05);
 }
 
 @keyframes scaleButton {
@@ -162,6 +234,8 @@ i {
   .hero h1 {
     font-size: 24px;
   }
+
+
 }
 .about {
   background-color: #06121e;
@@ -188,18 +262,25 @@ i {
   display: flex;
   max-width: 100%;
   max-height: 100%;
+  margin: auto;
 }
 
 .about-description h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
   font-size: 38px;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
+  padding: 100px;
 }
+
 .about-description p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  align-items: center;
+  padding: 10px;
   margin-bottom: 14px;
   line-height: 150%;
-  justify-content: center;
-  text-align: center;
-  display: flex;
+  text-align: center center;
 }
 
 @media screen and (max-width: 768px) {
@@ -302,7 +383,7 @@ i {
 }
 
 body {
-  font-family: "Sora", sans-serif;
+  font-family: 'Sora' sans-serif;
   width: 100%;
   height: 100vh;
   position: relative;
@@ -326,3 +407,59 @@ a {
   cursor: pointer;
   text-decoration: none;
 }/*# sourceMappingURL=style.css.map */
+
+
+.haircuts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 0 44px 34px 44px;
+}
+
+.haircut1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+  border-radius: 8px;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+.haircut1 img {
+  width: 100%;
+  max-width: 354px;
+  transition: transform 0.2s;
+}
+
+.haircut img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.haircut-info2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  background-color: #FFF;
+  z-index: 99;
+}
+
+.haircut-info2 button {
+  color: #FFF;
+  background-color: #d94140;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 0;
+  cursor: default;
+}
+
+.whatts{
+  position: absolute;
+  width: 4%;
+  padding: -60px 20 20 10;
+  float: right 20px;
+  right: 95%;
+  cursor: pointer;
+}

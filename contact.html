@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Dev Barber</title>
+
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(126, 21, 21);
+    }
+
+    .box{
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 15px;
+        border-radius: 15px;
+        width: 20%;
+    }
+    
+    fieldset{
+        border: 3px solid red;
+    }
+
+    legend{
+        border: 1px solid rgb(94, 23, 23);
+        padding: 10px;
+        text-align: center;
+        background-color: rgb(126, 21, 21);
+        border-radius: 8px;
+    }
+
+    .InputBox{
+        position: relative;
+    }
+    .InputUser{
+        background: none;
+        border: none;
+        border-bottom: 1px solid white;
+        outline: none;
+        color: white;
+        font-size: 15px;
+        width: 100%;
+        letter-spacing: 2px;
+    }
+
+    .LabelInput{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        pointer-events: none;
+        transition: .5s;
+    }
+
+    .InputUser:focus ~ .LabelInput,
+    .InputUser:valid ~ .LabelInput{
+        top: -20px;
+        font-size: 12px;
+        color: red;
+    }
+
+    #submit{
+        background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(187, 29, 29));
+        width: 100%;
+        border: none;
+        padding: 15px; 
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    #submit:hover{
+        background-image: linear-gradient(to right, rgb(46, 17, 17), rgb(187, 29, 29));
+    }
+
+    .image{
+        position: absolute;
+        top: 34%;
+        left: 30%;
+        transform: translate(-100%,19%);
+    }
+
+
+</style>
+
+
+
+</head>
+<body>
+    
+<div class="box">
+    <form action="">
+        <fieldset>
+            <legend><b>Contato</b></legend>
+            <br>
+            <div class="InputBox">
+                <input type="text" name="nome" id="nome" class="InputUser" required>
+                <label for="nome" class="LabelInput">Nome</label>
+            </div>
+            <br><br>
+            <div class="InputBox">
+                <input type="text" name="email" id="email" class="InputUser" required>
+                <label for="email" class="LabelInput">E-mail</label>
+            </div>
+            <br><br>
+            <div class="InputBox">
+                <input type="tel" name="telefone" id="telefone" class="InputUser" required>
+                <label for="telefone" class="LabelInput">Telefone</label>
+            </div>
+            <br><br>
+            <div class="InputBox">
+                <input type="text" name="assunto" id="assunto" class="InputUser" required>
+                <label for="assunto" class="LabelInput">Assunto</label>
+            </div>
+            <br><br>
+            <div class="InputBox">
+                <input type="text" name="mensagem" id="mensagem" class="InputUser" required>
+                <label for="mensagem" class="LabelInput">Mensagem</label>
+            </div>
+            <br><br>
+            <input type="submit" name="submit" id="submit">
+        </div>
+    </div>
+        </fieldset>
+    </form>
+</div>
+
+<div class="image">
+    <img src="assets/assets/logo.svg" alt="Logo da Barbearia" width="230px" height="249px" />
+</div>
+
+
+</body>
+</html>
